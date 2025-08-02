@@ -4,7 +4,7 @@
     enable = true;
     package = pkgs.hyprland;
 
-    xwayland.enable = false;
+    xwayland.enable = true;
     
     settings = {
       general = {
@@ -17,7 +17,7 @@
         gaps_workspaces = 0;
         
         "col.inactive_border" = "rgb(108,112,134)";
-        "col.active_border" = "rgb(203,166,247)";
+        "col.active_border" = "rgb(137,180,250)";
         # "col.nogroup_border" = "";
         # "col.nogroup_border_active" = "";
         

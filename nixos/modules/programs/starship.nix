@@ -8,7 +8,7 @@
       add_newline = true;
       
       format = ''
-        [{](bold #cba6f7)$username[@](bold #89dceb)$hostname[}:](bold #cba6f7)[ {](bold #cba6f7)$directory[}](bold #cba6f7)
+        $username[@](bold #89dceb)$hostname[: ](bold #89dceb)$directory
         $character
       '';
 

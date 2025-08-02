@@ -6,6 +6,7 @@
     ./binds.nix
     ./decoration.nix
     ./input.nix
+    ./misc.nix
     ./monitor.nix
     ./xwayland.nix
   ];

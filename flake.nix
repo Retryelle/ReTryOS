@@ -34,17 +34,22 @@
       modules = [
         ./nixos/modules
 
+        ./hosts/${hostname}/configuration.nix
+
         home-manager.nixosModules.home-manager
         {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.backupFileExtension = "backup";
-          home-manager.users.${user} = ./home-manager/home.nix;
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            backupFileExtension = "backup";
+            users.${user} = ./home-manager/home.nix;
+            extraSpecialArgs = { inherit user stateVersion; };
+          };
         }
       ];
     };
   in {
-    nixosConfigurations = builtins.listToAttrs (map: (host: {
+    nixosConfigurations = builtins.listToAttrs (map (host: {
       name = host.hostname;
       value = build {
         inherit (host) hostname system stateVersion;

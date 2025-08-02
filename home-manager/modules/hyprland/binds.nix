@@ -2,7 +2,7 @@
   wayland.windowManager.hyprland.settings = {
     bind = [
       "super, space, exec, wofi --show drun"                                                                      
-      "super, return, exec, alacritty"
+      "super, return, exec, kitty"
                                                                                                           
       "super, q, killactive,"                                                                                     
       "super shift, q, exit,"                                                                                     

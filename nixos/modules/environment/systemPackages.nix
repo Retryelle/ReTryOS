@@ -2,9 +2,8 @@
 {
   environment.systemPackages = with pkgs;
   [
-    alacritty
+    tree
     brightnessctl
-    firefox
     fzf
     hypridle
     hyprland

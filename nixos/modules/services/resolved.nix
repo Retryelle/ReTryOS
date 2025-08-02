@@ -4,15 +4,15 @@
 
     extraConfig = ''
       [Resolve]
-      DNS=1.1.1.1
-      FallbackDNS=1.0.0.1
+      DNS=9.9.9.9
+      FallbackDNS=9.9.9.10
       Domains=~.
       LLMNR=no
       MulticastDNS=no
       DNSSEC=yes
       Cache=yes
       ReadEtcHosts=yes
-      DNSOverTLS=yes
+      DNSOverTLS=strict
     '';
   };
 }
